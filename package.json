@@ -1,15 +1,21 @@
 {
   "name": "tachyons",
+  "config": {
+    "port": "8080"
+  },
   "version": "4.8.1",
-  "description": "Functional CSS for humans",
-  "author": "mrmrs",
-  "style": "css/tachyons.min.css",
-  "main": "css/tachyons.css",
+  "dependencies": {
+    "nodemailer": "~0.7.1",
+    "express": "~4.5.1"
+  },
+  "description": "S.C.U.M wifi hotspot landing page",
+  "author": "usrrname",
+  "style": "public/app/css/tachyons.min.css",
+  "main": "api/server.js",
   "files": [
-    "css",
-    "src"
+    "public"
   ],
-  "repository": "tachyons-css/tachyons",
+  "repository": "https://github.com/usrrname/captive-portal.git",
   "keywords": [
     "css",
     "oocss",
@@ -22,28 +28,27 @@
   "license": "MIT",
   "devDependencies": {
     "copy-files": "^0.1.0",
+    "eslint": "^4.7.2",
+    "express": "^4.15.4",
     "immutable-css-cli": "^1.1.1",
+    "nodemon": "^1.12.1",
     "normalize.css": "^7.0.0",
-    "tachyons-modules": "^1.1.10",
     "tachyons-cli": "^1.0.11",
+    "tachyons-modules": "^1.1.10",
     "watch": "^1.0.2"
   },
   "contributors": [
     {
-      "name": "adam morse",
-      "email": "hi@mrmrs.cc"
-    },
-    {
-      "name": "john otander",
-      "url": "http://johnotander.com"
+      "name": "jen chan",
+      "url": "http://jennifer-chan.com"
     }
   ],
   "scripts": {
     "start": "npm run build:watch",
-    "mutations": "immutable-css src/tachyons.css --strict",
+    "mutations": "immutable-css ./public/app/src/tachyons.css --strict",
     "build": "npm run build:css && npm run build:minify",
-    "build:css": "tachyons src/tachyons.css > css/tachyons.css",
-    "build:minify": "tachyons src/tachyons.css -m > css/tachyons.min.css",
-    "build:watch": "watch \"npm run build\" ./src/"
+    "build:css": "tachyons ./public/app/src/tachyons.css > ./public/app/css/tachyons.css",
+    "build:minify": "tachyons ./public/app/src/tachyons.css -m > ./public/app/css/tachyons.min.css",
+    "build:watch": "watch \"npm run build\" ./public/app/src/"
   }
 }
