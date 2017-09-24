@@ -69,7 +69,7 @@ app.get('/',function(req,res){
 
 // /*--------------------Routing Over----------------------------*/
 
-var server = app.listen(process.env.PORT,function(){
+var server = app.listen(port,function(){
     console.log("Express Started on Port 8080");
 });
 

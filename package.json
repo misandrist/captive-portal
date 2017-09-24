@@ -45,6 +45,7 @@
   ],
   "scripts": {
     "start": "npm run build:watch",
+    "test":"node api/server.js",
     "mutations": "immutable-css ./public/app/src/tachyons.css --strict",
     "build": "npm run build:css && npm run build:minify",
     "build:css": "tachyons ./public/app/src/tachyons.css > ./public/app/css/tachyons.css",
