@@ -1,9 +1,19 @@
-var express=require('express');
+var express = require('express');
+var db = require('./config/db');
+
 // var nodemailer = require("nodemailer");
 var app = express();
 var port = process.env.PORT || 8080;
-
+var router = express.Router();
 app.use(express.static(__dirname + './../public/app'));
+
+var api = require('./api.js');
+
+var server = app.listen(port,function(){
+    console.log("Express Started on Port 8080");
+});
+
+
 // /*
 //    configuring our SMTP Server details.
 //     STMP is mail server which is responsible for sending and recieving email.
@@ -22,6 +32,12 @@ app.use(express.static(__dirname + './../public/app'));
 
 app.get('/',function(req,res){
     res.sendfile('index.html');
+});
+
+app.use('/', api);
+
+app.get('/next',function(req,res){
+    res.sendfile('./views/next.html');
 });
 
 // app.get('/send',function(req,res){
@@ -58,7 +74,7 @@ app.get('/',function(req,res){
 //     else
 //     {
 //         console.log("email is not verified");
-//         res.end("<h1>Bad Request</h1>");
+//         res.end("<h1>Bad Request.</h1><p>Email is not verified, does not work, or just doesn't exist. Try again.</p>");
 //     }
 // }
 // else
@@ -69,8 +85,4 @@ app.get('/',function(req,res){
 
 // /*--------------------Routing Over----------------------------*/
 
-var server = app.listen(port,function(){
-    console.log("Express Started on Port 8080");
-});
-
-module.exports=app;
+module.exports = router();
