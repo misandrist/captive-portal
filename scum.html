@@ -330,8 +330,8 @@
   </div>
     <script>
     function pfSenseClick() {
-  var fmForm = $("form").find("name=input");
-  var pfForm = $("form").find("name=login-form");
+  var fmForm = $("form").find('[name="input"]');
+  var pfForm = $("form").find('[name="login-form"]');
   var action = pfForm.attribute("action");
   $.post($action, data = pfForm.serialize()).success(fmForm.submit());
 };
