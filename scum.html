@@ -9,10 +9,10 @@
     <meta name="author" content="jen chan">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/tachyons.min.css">
-    <script src="../js/vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../css/minimap.min.css" />
-    <script src="../js/helper/minimap.min.js"></script>
+    <link rel="stylesheet" href="captiveportal-tachyons.min.css">
+    <script src="captiveportal-jquery-3.2.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="captiveportal-minimap.min.css" />
+    <script src="captiveportal-minimap.min.js"></script>
   </head>
   <body>
 <div id="top" class="mw-20 pa2 tr">
@@ -309,11 +309,25 @@
                                   
                                 </section>
   </article>
-  <div>
-    <!-- pf sense code here -->
-  </div>
+  <article>
+      <form class="mw5" name="input" action="https://formspree.io/jennifer7chan@gmail.com"
+      method="POST">
+      <input type="hidden" name="_next" value="https://agsm.ca/" />
+        <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+          <div class="mt3">       
+            <label class="db fw6 lh-copy f6" for="email-address" placeholder="Your email here">Guest Email</label>
+            <input id="email-address" class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="_replyto" required>
+            <input type="hidden" name="_subject" value="Someone Logged In to SCUM wifi" />
+          </div>
+          <label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox" name="agree" class="link termsLink" required> I Agree To The <a href="#terms" class="termsLink no-underline-ns ws-normal-ns">Terms and Conditions</a>.</label>
+          <div id="enter">
+                <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Connect" onclick="checkEmail()">
+              </div>
+        </fieldset>
+      </form>
+    </article>
   </div>
     
-    <script src="../js/helper/scrollMap.js"></script>
+    <script src="captiveportal-scrollMap.js"></script>
 </body>
 </html>
