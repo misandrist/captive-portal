@@ -3,6 +3,11 @@ var previewBody = $('body').minimap();
 
 var Minimap = $( "#minimap" ).minimap( previewBody );
 
+$(previewBody).on("click touchstart", function() {
+    // Do things
+    return false;
+  });
+  
 // 'element' is desired dom element 
 var minimap = new MiniMap(
     previewBody, 
@@ -25,4 +30,3 @@ var minimap = new MiniMap(
 }
 });
 minimap.show();
-
