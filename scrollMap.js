@@ -13,16 +13,15 @@ var minimap = new MiniMap(
     fadeHover:true,
     hoverOpacity:0.7, 
     hoverFadeSpeed:0.4, 
-    touch:true, 
+    touch: true, 
     disableFind:true,
     position:'right',
     smoothScroll:true,
     smoothScrollDelay: 400,
     animation:true,
     onPreviewChange: function(minimap, scale){
-        minimap.previewBody.setSmoothScrollDelay(800);
-        minimap.scale = 1;
-        minimap.show();
+        minimap.previewBody.setSmoothScrollDelay(400);
+        minimap.scale = 0.6;
 }
 });
 minimap.show();
